@@ -52,6 +52,7 @@ int _printf(const char *format, ...)
 				case 'i':
 					{
 						int num = va_arg(args, int);
+
 						printed_chars += print_integer(num);
 						break;
 					}
@@ -59,6 +60,7 @@ int _printf(const char *format, ...)
 				case 'd':
 					{
 						int num = va_arg(args, int);
+
 						printed_chars += print_integer(num);
 						break;
 					}
