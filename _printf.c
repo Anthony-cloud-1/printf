@@ -25,6 +25,9 @@ int _printf(const char *format, ...)
 			format++;
 			switch (*format)
 			{
+				/*
+				 * For char
+				 */
 				case 'c':
 					{
 						char c = va_arg(args, int);
@@ -34,6 +37,9 @@ int _printf(const char *format, ...)
 						break;
 					}
 
+				/*
+				 * For str
+				 */
 				case 's':
 					{
 						char *str = va_arg(args, char *);
@@ -48,7 +54,9 @@ int _printf(const char *format, ...)
 						break;
 					}
 
-
+				/*
+				 * For %
+				 */
 				case '%':
 					write(1, "%", 1);
 					printed_chars++;
