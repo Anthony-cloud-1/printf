@@ -22,14 +22,14 @@ int parse_format(const char *format, va_list args)
 				break;
 			if (*format == '%')
 			{
-				putchar('%');
+				_putchar('%');
 				count++;
 			}
 			else if (*format == 'c')
 			{
 				char c = va_arg(args, int);
 
-				putchar(c);
+				_putchar(c);
 				count++;
 			}
 			else if (*format == 's')
@@ -89,7 +89,7 @@ int parse_format(const char *format, va_list args)
 		}
 		else
 		{
-			putchar(*format);
+			_putchar(*format);
 			count++;
 			format++;
 		}

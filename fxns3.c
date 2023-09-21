@@ -25,13 +25,33 @@ int print_hexadecimal(unsigned int num, int uppercase)
 
 	if (num < 16)
 	{
-		putchar(hex_chars[num]);
+		_putchar(hex_chars[num]);
 		count++;
 	}
 	else
 	{
 		count += print_hexadecimal(num / 16, uppercase);
-		putchar(hex_chars[num % 16]);
+		_putchar(hex_chars[num % 16]);
+		count++;
+	}
+
+	return (count);
+}
+
+/**
+ * print_binary_recursive - Recursively prints an unsigned integer in binary.
+ * @num: The unsigned integer to print in binary.
+ *
+ * Return: The number of characters printed.
+ */
+int print_binary_recursive(unsigned int num)
+{
+	int count = 0;
+
+	if (num != 0)
+	{
+		count += print_binary_recursive(num >> 1);
+		_putchar((num & 1) + '0');
 		count++;
 	}
 

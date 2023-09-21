@@ -13,7 +13,7 @@ int print_octal(unsigned int num)
 
 	if (num == 0)
 	{
-		putchar('0');
+		_putchar('0');
 		count++;
 	}
 	else
@@ -25,7 +25,7 @@ int print_octal(unsigned int num)
 }
 
 /**
- * print_unsigned_recursive - Recursively prints an unsigned integer.
+i * print_unsigned_recursive - Recursively prints an unsigned integer.
  * @num: The unsigned integer to print.
  *
  * Return: The number of characters printed.
@@ -37,7 +37,7 @@ int print_unsigned_recursive(unsigned int num)
 	if (num != 0)
 	{
 		count += print_unsigned_recursive(num / 10);
-		putchar((num % 10) + '0');
+		_putchar((num % 10) + '0');
 		count++;
 	}
 
@@ -57,7 +57,7 @@ int print_octal_recursive(unsigned int num)
 	if (num != 0)
 	{
 		count += print_octal_recursive(num / 8);
-		putchar((num % 8) + '0');
+		_putchar((num % 8) + '0');
 		count++;
 	}
 
@@ -75,7 +75,7 @@ int print_binary(unsigned int num)
 
 	if (num == 0)
 	{
-		putchar('0');
+		_putchar('0');
 		count++;
 	}
 	else
@@ -94,12 +94,12 @@ int print_binary(unsigned int num)
 int print_pointer(void *ptr)
 {
 	int count = 0;
-	uintptr_t address = (uintptr_t)ptr;
+	unsigned long int p = (unsigned long int)ptr;
 
-	putchar('0');
-	putchar('x');
+	_putchar('0');
+	_putchar('x');
 	count += 2;
-	count += print_hexadecimal(address, 0);
+	count += print_hexadecimal(p, 1);
 
 	return (count);
 }

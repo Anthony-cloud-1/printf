@@ -15,16 +15,16 @@ int print_string(const char *str)
 	{
 		if (*str >= 32 && *str < 127)
 		{
-			putchar(*str);
+			_putchar(*str);
 			count++;
 		}
 		else
 		{
-			putchar('\\');
-			putchar('x');
+			_putchar('\\');
+			_putchar('x');
 			if (*str < 16)
 			{
-				putchar('0');
+				_putchar('0');
 				count++;
 			}
 			count += 2;
@@ -49,13 +49,13 @@ int print_hex(int value)
 
 	if (value < 16)
 	{
-		putchar(hex_chars[value]);
+		_putchar(hex_chars[value]);
 		count++;
 	}
 	else
 	{
 		count += print_hex(value / 16);
-		putchar(hex_chars[value % 16]);
+		_putchar(hex_chars[value % 16]);
 		count++;
 	}
 
@@ -74,7 +74,7 @@ int print_integer(int num)
 
 	if (num < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		count++;
 		num = -num;
 	}
@@ -96,7 +96,7 @@ int print_unsigned(unsigned int num)
 
 	if (num == 0)
 	{
-		putchar('0');
+		_putchar('0');
 		count++;
 	}
 	else
@@ -120,16 +120,16 @@ int print_custom_string(const char *s)
 	{
 		if (*s >= 32 && *s < 127)
 		{
-			putchar(*s);
+			_putchar(*s);
 			count++;
 		}
 		else
 		{
-			putchar('\\');
-			putchar('x');
+			_putchar('\\');
+			_putchar('x');
 			if (*s < 16)
 			{
-				putchar('0');
+				_putchar('0');
 				count++;
 			}
 			count += print_hex(*s);
