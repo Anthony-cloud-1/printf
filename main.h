@@ -6,4 +6,5 @@
 
 int _printf(const char *format, ...);
 int print_integer(int n);
+int print_binary(unsigned int num);
 #endif /* MAIN_H */
