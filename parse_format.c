@@ -13,6 +13,9 @@ int parse_format(const char *format, va_list args)
 {
 	int count = 0;
 
+	if (format == NULL)
+		return (-1);
+
 	while (*format)
 	{
 		if (*format == '%')
