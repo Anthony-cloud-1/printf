@@ -99,7 +99,7 @@ int print_pointer(void *ptr)
 	_putchar('0');
 	_putchar('x');
 	count += 2;
-	count += print_hexadecimal(p, 1);
+	count += print_hexadecimal(p, 0);
 
 	return (count);
 }
