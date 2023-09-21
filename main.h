@@ -13,5 +13,5 @@ int print_unsigned(unsigned int num);
 int print_octal(unsigned int num);
 int print_unsigned_recursive(unsigned int num);
 int print_octal_recursive(unsigned int num);
-int _putchar(char c);
+int putchar(char c);
 #endif /* MAIN_H */
