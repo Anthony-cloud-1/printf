@@ -13,5 +13,9 @@ int print_unsigned(unsigned int num);
 int print_octal(unsigned int num);
 int print_unsigned_recursive(unsigned int num);
 int print_octal_recursive(unsigned int num);
+int print_custom_string(const char *s);
+int print_binary(unsigned int num);
+int print_pointer(void *ptr);
+int print_hexadecimal(unsigned int num, int uppercase);
 int putchar(char c);
 #endif /* MAIN_H */

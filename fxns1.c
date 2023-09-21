@@ -106,3 +106,36 @@ int print_unsigned(unsigned int num)
 
 	return (count);
 }
+
+/**
+ * print_custom_string - Prints a custom string with non-printable characters.
+ * @s: The string to print.
+ * Return: The number of characters printed.
+ */
+int print_custom_string(const char *s)
+{
+	int count = 0;
+
+	while (*s)
+	{
+		if (*s >= 32 && *s < 127)
+		{
+			putchar(*s);
+			count++;
+		}
+		else
+		{
+			putchar('\\');
+			putchar('x');
+			if (*s < 16)
+			{
+				putchar('0');
+				count++;
+			}
+			count += print_hex(*s);
+		}
+		s++;
+	}
+
+	return (count);
+}

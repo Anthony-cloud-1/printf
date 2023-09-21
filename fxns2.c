@@ -63,3 +63,43 @@ int print_octal_recursive(unsigned int num)
 
 	return (count);
 }
+
+/**
+ * print_binary - Prints an unsigned integer in binary format.
+ * @num: The unsigned integer to print in binary.
+ * Return: The number of characters printed.
+ */
+int print_binary(unsigned int num)
+{
+	int count = 0;
+
+	if (num == 0)
+	{
+		putchar('0');
+		count++;
+	}
+	else
+	{
+		count += print_binary_recursive(num);
+	}
+
+	return (count);
+}
+
+/**
+ * print_pointer - Prints a pointer address in hexadecimal format.
+ * @ptr: The pointer to print.
+ * Return: The number of characters printed.
+ */
+int print_pointer(void *ptr)
+{
+	int count = 0;
+	uintptr_t address = (uintptr_t)ptr;
+
+	putchar('0');
+	putchar('x');
+	count += 2;
+	count += print_hexadecimal(address, 0);
+
+	return (count);
+}
