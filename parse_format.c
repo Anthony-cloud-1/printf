@@ -53,7 +53,7 @@ int parse_format(const char *format, va_list args)
 			{
 				unsigned int num = va_arg(args, unsigned int);
 
-				count += print_unsigned(num);
+				count += print_unsigned int(num);
 			}
 			else if (*format == 'o')
 			{
