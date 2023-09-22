@@ -42,7 +42,7 @@ int print_hexadecimal(unsigned int num, int uppercase)
  * print_binary_recursive - Recursively prints an unsigned integer in binary.
  * @num: The unsigned integer to print in binary.
  *
- * Return: The number of characters printed.
+ * Return: The number of characters to printed.
  */
 int print_binary_recursive(unsigned int num)
 {
