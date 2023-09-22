@@ -25,7 +25,7 @@ int print_octal(unsigned int num)
 }
 
 /**
-i * print_unsigned_recursive - Recursively prints an unsigned integer.
+ * print_unsigned_recursive - Recursively prints an unsigned integer.
  * @num: The unsigned integer to print.
  *
  * Return: The number of characters printed.
