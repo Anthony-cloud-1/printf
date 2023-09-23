@@ -94,8 +94,9 @@ int parse_format(const char *format, va_list args)
 		{
 			_putchar(*format);
 			count++;
-			format++;
 		}
+
+		format++;
 	}
 
 	return (count);
