@@ -1,2 +1,3 @@
 Custom printf
-This README.md file contains the C - printf group project 
+
+This README.md file contains the C - printf group project. 
