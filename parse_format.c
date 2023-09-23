@@ -96,7 +96,6 @@ int parse_format(const char *format, va_list args)
 			count++;
 			format++;
 		}
-
 	}
 
 	return (count);
