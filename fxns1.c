@@ -79,7 +79,7 @@ int print_integer(int num)
 		num = -num;
 	}
 
-	count += print_unsigned int((unsigned int)num);
+	count += print_unsigned((unsigned int)num);
 
 	return (count);
 }
